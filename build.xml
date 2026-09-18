@@ -1,0 +1,13 @@
+<project name="CS680" default="compile" basedir=".">
+    <property name="src.dir" value="src"/>
+    <property name="bin.dir" value="bin"/>
+
+    <target name="clean">
+        <delete dir="${bin.dir}"/>
+    </target>
+
+    <target name="compile" depends="clean">
+        <mkdir dir="${bin.dir}"/>
+        <javac srcdir="${src.dir}" destdir="${bin.dir}" includeantruntime="false"/>
+    </target>
+</project>
