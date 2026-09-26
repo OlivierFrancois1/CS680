@@ -1,8 +1,8 @@
 //create a  class student
 class Student {
     // create private elements
-    protected  String name;
-    protected int age;
+   private String name;
+private int age;
     private static int studentCount = 0;
 
 
@@ -27,6 +27,10 @@ class Student {
  static  int getCount() {
         return studentCount;
      }
+
+     void haveBirthday() {
+  this.age++;
+}
     
 }
 
@@ -48,14 +52,13 @@ String getTitle(){
     return  this.title;
 }
 
-void haveBirthday() {
-  this.age++;
-}
+
 
 
 
 
 }
+
 
 
 
@@ -63,18 +66,14 @@ void haveBirthday() {
 public class Main{
     public static  void  main(String[] args) {
 
-//  create the instances
-Student student1 = new  Student("Olivier", 12);
-graduateStudent  student2  = new graduateStudent("kepler", 23, "Math");
+Student student1 = new Student("Olivier", 12);
+graduateStudent student2 = new graduateStudent("kepler", 23, "Math");
 student2.haveBirthday();
 
-
-// the output
 System.out.println("Name: " + student1.getName() + "  age: " + student1.getAge());
 System.out.println("Name: " + student2.getName() + "  age: " + student2.getAge() + " title: " + student2.getTitle());
 System.out.println("Number of student: " + student1.getCount());
 System.out.println("New age: " + student2.getAge());
-
 
 
     }
